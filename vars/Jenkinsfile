@@ -3,10 +3,20 @@
 pipeline{
     agent any
     stages{
-        stage('Demo'){
+        stage('Greeting'){
             steps{
                 welcome('Debi Prasad')
             }
         }
+        
+        stage('Calculation'){
+            steps{
+                script{
+                    calculator.add(5,10)
+                    calculator.mul(10,20)
+                }
+            }
+        }
+        
     }
 }
